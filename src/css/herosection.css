@@ -1,0 +1,20 @@
+.herosection {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background-image: url("../images/3.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+}
+
+.herosection h3{
+    padding: 2rem;
+    background-color: #73F15F;;
+    text-align: center;
+    border: 3px solid #73F15F;
+    border-radius: 10%;
+}
