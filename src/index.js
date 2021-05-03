@@ -4,11 +4,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header'
 import HeroSection from './components/HeroSection'
+import Footer from './components/footer'
+import Main from './components/main'
+import ProgressBar from  './components/progressbar'
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <HeroSection />
+    <Main />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

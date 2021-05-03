@@ -1,5 +1,5 @@
-.herosection {
-    position: absolute;
+.heroSection {
+    position: relative;
     height: 100vh;
     width: 100%;
     z-index: -1;
@@ -8,13 +8,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
 }
 
-.herosection h3{
+.portfolio{
+    margin: 0 auto;
     padding: 2rem;
-    background-color: #73F15F;;
-    text-align: center;
-    border: 3px solid #73F15F;
-    border-radius: 10%;
+    z-index:2;
+    background-color: black;
+    color:white;
+    align-self: center;
+    border-radius: 5%;
+}
+
+.portfolio:hover{
+    background-color:  #73F15F;
+    color:black;
+    transition: 1s ease-out;
 }

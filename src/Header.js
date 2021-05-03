@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./css/bootstrap-icons.css"
 import "./css/header.css"
 

@@ -20,11 +20,12 @@
     top: 100%;
     width: 100%;
     position: absolute;
-    color: rgb(255, 255, 255);
+    color: rgb(115,241,95,1);
     align-self: center;
     list-style-type: none;
     font-size: 1.2rem;
     background-color: #73F15F;
+    transition: display 2s ease;
 }
 
 .nav-menu--active{
@@ -37,7 +38,7 @@
     color:black;
     text-decoration: none;
     padding: 2px 0 2px 0;
-    border-bottom: 1.5px solid black;
+    border-bottom: 0.5px solid black;
 }
 
 .nav-menu a{
@@ -58,4 +59,59 @@
 .icon {
     font-size: 4rem;
     margin-right: 1.5rem;
+}
+
+/* Media Query. */
+
+@media only screen and (min-width: 960px) {
+
+    .headerContainer {
+        width:100%;
+        border-bottom: 2px solid black;
+        background: linear-gradient(24deg, rgba(115,241,95,1) 0%, rgba(255,255,255,0.865983893557423) 100%);
+    }
+    
+    .nav-menu{
+        display: nonec;
+    }
+
+
+    .nav-menu--active{
+        color: black;
+        display: flex;
+        flex-direction: row;
+        position: initial;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    .nav-menu--active a {
+        align-self: flex-end;
+        color: white;
+        background-color: black;
+        border: 0.5px solid black;
+        border-radius: 5%;
+        margin: 0 1rem 1rem 1rem;
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        text-decoration: none;
+    }
+
+    .nav-menu--active li a:link{
+        text-decoration: none;
+    }
+
+    .nav-menu--active li a:visited{
+        text-decoration: none;
+    }
+
+    .nav-menu--active  a:hover {
+            background-color:  #73F15F;
+            color:black;
+            transition: 1s ease-out;
+    }
+
+    .icon {
+        display:none;
+    }
+
 }
