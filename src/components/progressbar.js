@@ -2,25 +2,18 @@ import React from 'react';
 import "../css/progressbar.css"
 
 
-const ProgressBar = () => {
+const ProgressBar = (props) => {
+
 
 return (
-<div class="progressbar-wrapper">
-     <div class="progressbar">
-          <div class="side front">
-               <div class="bar"></div>
+<div className="progressWrapper">
+     <div className='progress'>
+          <div 
+          className={`progress-done ${ props.color } ${ props.width }`}>
+               {props.percent}
           </div>
-          <div class="side back">
-               <div class="bar"></div>
-          </div>
-          <div class="side top">
-               <div class="bar"></div>
-          </div>
-          <div class="side bottom">
-               <div class="bar"></div>
-          </div>
-          <div class="side left"></div>
      </div>
+     <h2 className={`${props.textColor}`}>{props.language}</h2>
 </div>
     )
 }

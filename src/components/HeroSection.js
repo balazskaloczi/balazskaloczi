@@ -6,7 +6,7 @@ const HeroSection = () => {
     
     return (
         <div className="heroSection">
-            <div>
+            <div className="wrapper">
                 <h3 className="portfolio">My Portfolio</h3>
             </div>
         </div>

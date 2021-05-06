@@ -1,6 +1,6 @@
 import React from 'react';
-import "./css/bootstrap-icons.css"
-import "./css/header.css"
+import "../css/bootstrap-icons.css"
+import "../css/header.css"
 
 class Header extends React.Component {
     state = {isClicked : false}

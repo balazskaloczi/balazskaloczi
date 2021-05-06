@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './Header'
+import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import Footer from './components/footer'
 import Main from './components/main'
-import ProgressBar from  './components/progressbar'
+
 
 ReactDOM.render(
   <React.StrictMode>
