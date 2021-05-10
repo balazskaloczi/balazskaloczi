@@ -7,7 +7,7 @@ const HeroSection = () => {
     return (
         <div className="heroSection">
             <div className="wrapper">
-                <h3 className="portfolio">My Portfolio</h3>
+                <a href="#"><h3 className="portfolio">My Projects</h3></a>
             </div>
         </div>
     );

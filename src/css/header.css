@@ -73,6 +73,7 @@
     .headerContainer {
         width:100%;
         border-bottom: 2px solid black;
+        position: fixed;
     }
     
     .nav-menu{

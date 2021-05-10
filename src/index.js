@@ -6,13 +6,13 @@ import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import Footer from './components/footer'
 import Main from './components/main'
+import Contact from './components/contact'
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <HeroSection />
-    <Main />
+    <Contact />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')

@@ -16,8 +16,7 @@ class Header extends React.Component {
                 </div>
                 <ul className={this.state.isClicked ? "nav-menu" : "nav-menu--active"}>
                     <a href="#"><li>Home</li></a>
-                    <a href="#"><li>About</li></a>
-                    <a href="#"><li>Portfolio</li></a>
+                    <a href="#"><li>Projects</li></a>
                     <a href="#"><li>Contact</li></a>
                 </ul>
                 <div  className="icon" onClick={this.handleClick}>
