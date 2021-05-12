@@ -1,5 +1,6 @@
 .mainWrapper {
     background-color: black;
+    color:whitesmoke;   
     display: flex;
     flex-direction: column;
     justify-content: center;

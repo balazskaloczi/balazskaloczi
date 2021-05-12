@@ -1,19 +1,13 @@
+import App from './app.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import Footer from './components/footer'
-import Main from './components/main'
-import Contact from './components/contact'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Contact />
-    <Footer />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

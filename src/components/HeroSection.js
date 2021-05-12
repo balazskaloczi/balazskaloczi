@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import "../css/herosection.css"
 
@@ -7,7 +8,7 @@ const HeroSection = () => {
     return (
         <div className="heroSection">
             <div className="wrapper">
-                <a href="#"><h3 className="portfolio">My Projects</h3></a>
+                <Link to="/projects"><h3 className="portfolio">My Projects</h3></Link>
             </div>
         </div>
     );
