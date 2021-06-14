@@ -2,7 +2,6 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 
 import "../css/contactform.css"
-import { getDefaultNormalizer } from '@testing-library/dom';
 
 export default function ContactForm() {
 

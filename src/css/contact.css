@@ -1,5 +1,5 @@
 .contactWrapper {
-    height: 120vh;
+    height:calc(100vh - 46px);
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
 @media only screen and (min-width: 960px) {
 
     .contactWrapper {
-        height: 100vh;
+        height:calc(100vh - 46px);
         flex-direction: row;
         justify-content: space-around;
     }

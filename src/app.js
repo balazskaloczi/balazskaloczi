@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection'
 import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
+import Project from './components/project'
 
 import {
   BrowserRouter as Router,
@@ -22,6 +23,11 @@ function App() {
                 <Route exact path="/">
                     <HeroSection />
                     <Main />
+                </Route>
+            </Switch>
+            <Switch>
+                <Route  exact path="/projects">
+                    <Project />
                 </Route>
             </Switch>
             <Switch>

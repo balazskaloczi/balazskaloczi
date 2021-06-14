@@ -1,0 +1,9 @@
+.projectWrapper {
+    min-height:calc(100vh - 46px);
+    background-color: white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

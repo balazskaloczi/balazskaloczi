@@ -9,10 +9,9 @@ const Contact = () => {
                 <ContactForm />
             </div>
             <ul className="contactList">
-                <a to="#"><div> <i className="bi bi-linkedin"> </i>Linkedin</div></a>
-                <a to="#"><div> <i className="bi bi-facebook"> </i>Facebook</div></a>
-                <a to="#"><div> <i className="bi bi-github"></i> github</div> </a>
-                <a href="mailto:kaloczi.balazs01@gmail.com"><div> <i className="bi bi-envelope"></i> E-mail</div></a>
+                <a href="https://www.linkedin.com/in/balazs-kaloczi-9617551b8/" target="_blank" without rel="noreferrer"><div> <i className="bi bi-linkedin"> </i>Linkedin</div></a>
+                <a href="https://github.com/balazskaloczi" target="_blank" without rel="noreferrer"><div> <i className="bi bi-github"></i> github</div> </a>
+                <a href="mailto:kaloczi.balazs01@gmail.com" target="_blank" without rel="noreferrer"><div> <i className="bi bi-envelope"></i> E-mail</div></a>
             </ul>
         </div>
     );
