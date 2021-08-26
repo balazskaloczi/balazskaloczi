@@ -5,23 +5,29 @@ a {
 .headerContainer {
     position: absolute;
     height:3rem;
-    color: black;
+    color: rgb(255, 255, 255);
     width:100%;
     display:flex;
     justify-content: space-between;
-    border-bottom: 2px solid black;
-    background:  rgb(255, 255, 255);
     z-index: 2;
 }
 
-.name-tag{
+.headerContainer--scrolled{
+    color: rgb(0, 0, 0);
+}
+
+.nameTag{
     margin-left: 1rem;
     align-self: center;
 }
 
+.name-tag h3{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .nav-menu {
     padding:0;
-    margin-top:0.1rem;
     top: 100%;
     width: 100%;
     position: absolute;
@@ -29,11 +35,10 @@ a {
     list-style-type: none;
     font-size: 1.2rem;
     background-color:  #ffffff;
-    transition: left 10s ease;
 }
 
 .nav-menu--active{
-    color: black;
+    margin-top:1rem;
     list-style-type: none;
     position:absolute;
     left:-100%;
@@ -42,12 +47,11 @@ a {
 
 .nav-menu li {
     text-align: center;
-    color:black;
     text-decoration: none;
     padding: 2px 0 2px 0;
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid rgb(255, 255, 255);
     background-color: white;
-    transition: 1s ease-out;
+    transition: 0.5s ease-out;
 }
 
 .nav-menu li a:link{
@@ -57,7 +61,6 @@ a {
 
 
 .icon {
-    color:black;
     font-size: 2rem;
     margin-right: 1.5rem;
 }
@@ -75,8 +78,6 @@ a {
     }
 
     .nav-menu--active{
-        margin-top:initial;
-        color: black;
         display: flex;
         flex-direction: row;
         position: initial;
@@ -87,7 +88,6 @@ a {
     .nav-menu--active a {
         font-size: large;
         align-self: center;
-        color: rgb(0, 0, 0);
         border-radius: 5%;
         margin: 0 1rem 0 1rem;
         text-decoration: none;
@@ -102,7 +102,8 @@ a {
     }
 
     .nav-menu--active  a:hover {
-        border-bottom: 2px solid black;    
+        color: rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);    
         transition: 0.2s ease-out;
     }
 

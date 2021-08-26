@@ -4,7 +4,24 @@ import "../css/bootstrap-icons.css"
 import "../css/header.css"
 
 class Header extends React.Component {
-    state = {isClicked : false}
+    state = {isClicked : false,
+            halfWay: false}
+
+    scrollChecker = () => { window.addEvenetListener('scroll', () => {
+        const maxHeight = document.documentElement.scrollHeight
+        const currentPosition = window.scrollY;
+        const halfScreen = maxHeight/2
+
+        console.log(currentPosition)
+        if(currentPosition >= halfScreen) {
+            this.handleScroll()
+            console.log(this.currentPosition)
+        }
+    })}
+
+    handleScroll = () => {
+        this.setState({halfWay: !this.state.halfWay})
+    }
 
     handleClick = () => {
         this.setState({ isClicked: !this.state.isClicked})
@@ -12,9 +29,10 @@ class Header extends React.Component {
 
     render() {
     return  <header className="headerContainer">
-                <div className="name-tag">
+                <div className="nameTag">
                     <h3>balazs.kaloczi<i className="bi bi-slash fa-4x"></i></h3>
                 </div>
+                {console.log(this.state.viewPort)}
                 <ul className={this.state.isClicked ? "nav-menu" : "nav-menu--active"}>
                     <Link to="/"><li>Home</li></Link>
                     <Link to="/projects"><li>Projects</li></Link>
