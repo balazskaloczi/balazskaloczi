@@ -1,6 +1,7 @@
 .projectWrapper {
     min-height:calc(100vh - 46px);
-    background-color: white;
+    background-image: url("../images/black_projects.svg");
+    background-size: cover;
     height: auto;
     display: flex;
     justify-content: center;

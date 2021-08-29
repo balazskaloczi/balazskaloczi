@@ -1,5 +1,5 @@
 .mainWrapper {
-    background-image: url("../images/8.svg");
+    background-image: url("../images/black_home.svg");
     height: 100vh;
     background-size: cover;
     color:whitesmoke;   
@@ -9,4 +9,5 @@
     text-align: center;
     height:calc(100vh - 46px);
 }
+
 

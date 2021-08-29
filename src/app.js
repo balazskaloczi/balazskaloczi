@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header'
-import HeroSection from './components/HeroSection'
 import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
@@ -21,7 +20,6 @@ function App() {
             <Header />
             <Switch>
                 <Route exact path="/">
-                    <HeroSection />
                     <Main />
                 </Route>
             </Switch>

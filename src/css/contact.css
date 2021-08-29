@@ -1,11 +1,11 @@
 .contactWrapper {
     height:calc(100vh - 46px);
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/3.jpg");
+    background-image: url("../images/black_contact.svg");
+    background-size: cover;
 }
 
 .contactFormWrapper{
