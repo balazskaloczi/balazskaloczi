@@ -6,35 +6,41 @@ import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
 import Project from './components/project'
+import { AnimatePresence } from 'framer-motion';
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom";
 
 
-function App() {
+const App = () => {
+
+
     return (
-        <Router>
-            <Header />
-            <Switch>
-                <Route exact path="/">
-                    <Main />
-                </Route>
-            </Switch>
-            <Switch>
-                <Route  exact path="/projects">
-                    <Project />
-                </Route>
-            </Switch>
-            <Switch>
-                <Route path="/contact"> 
-                    <Contact/>
-                </Route>
-            </Switch>
-            <Footer />
-        </Router>
+        <AnimatePresence exitBeforeEnter initial={false}>
+            <Router>
+                <Header />
+                <Switch >
+                    <Route exact path="/">
+                        <Main />
+                    </Route>
+                </Switch>
+                <Switch >
+                    <Route  exact path="/projects">
+                        <Project />
+                    </Route>
+                </Switch>
+                <Switch >
+                    <Route path="/contact"> 
+                        <Contact/>
+                    </Route>
+                </Switch>
+                <Footer />
+            </Router>
+        </AnimatePresence>
     );
 };
 
