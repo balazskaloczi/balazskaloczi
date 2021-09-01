@@ -18,7 +18,6 @@ import {
 
 const App = () => {
 
-
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
             <Router>

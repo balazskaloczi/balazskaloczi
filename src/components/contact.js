@@ -3,10 +3,9 @@ import ContactForm from './contactform';
 import { motion } from 'framer-motion'
 
 const Contact = () => {
-    
     return (
-        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 2}}>
-            <div className="contactWrapper">
+        <div>
+            <motion.div className="contactWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 2.5}}>
                 <div className="contactFormWrapper">
                     <ContactForm />
                 </div>
@@ -15,8 +14,8 @@ const Contact = () => {
                     <a href="https://github.com/balazskaloczi" target="_blank" without rel="noreferrer"><div> <i className="bi bi-github"></i> github</div> </a>
                     <a href="mailto:kaloczi.balazs01@gmail.com" target="_blank" without rel="noreferrer"><div> <i className="bi bi-envelope"></i> E-mail</div></a>
                 </ul>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 };
 

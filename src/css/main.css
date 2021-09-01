@@ -1,24 +1,22 @@
 .mainWrapper {
-    background-image: url("../images/black_home.svg");
-    height: 100vh;
-    background-size: cover;
-    color:whitesmoke;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color:rgb(255, 255, 255);
     text-align: center;
     height:calc(100vh - 46px);
     overflow: hidden;
     width: 100%;
 }
 
-/* .backImage{
+.background{
     background-image: url("../images/black_home.svg");
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     pointer-events: none;
     position: absolute;
     z-index: -1;
-
-} */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 

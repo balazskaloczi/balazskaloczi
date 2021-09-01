@@ -5,12 +5,12 @@ import { motion } from 'framer-motion'
 const Project  = () => { 
 
     return ( 
-        <motion.div>
-        <div className="projectWrapper">
-                <ProjectComponent />
-                <ProjectComponent />
+        <div>
+            <motion.div className="projectWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 2.5}}>
+                    <ProjectComponent />
+                    <ProjectComponent />
+            </motion.div>
         </div>
-    </motion.div>
     )}
     
 export default Project 
