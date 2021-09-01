@@ -8,6 +8,17 @@
     justify-content: center;
     text-align: center;
     height:calc(100vh - 46px);
+    overflow: hidden;
+    width: 100%;
 }
+
+/* .backImage{
+    background-image: url("../images/black_home.svg");
+    background-size: cover;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+
+} */
 
 
