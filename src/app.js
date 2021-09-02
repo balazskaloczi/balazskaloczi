@@ -2,14 +2,13 @@ import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header'
-import Footer from './components/footer'
+// import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
 import Project from './components/project'
 import { AnimatePresence } from 'framer-motion';
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   useLocation
@@ -18,27 +17,16 @@ import {
 
 const App = () => {
 
+    const location = useLocation();
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
-            <Router>
-                <Header />
-                <Switch >
-                    <Route exact path="/">
-                        <Main />
-                    </Route>
+            <Header />
+                <Switch location={location} key={location.pathname}>
+                    <Route exact path="/" component={Main} />
+                    <Route  exact path="/projects" component={Project} />
+                    <Route path="/contact" component={Contact} /> 
                 </Switch>
-                <Switch >
-                    <Route  exact path="/projects">
-                        <Project />
-                    </Route>
-                </Switch>
-                <Switch >
-                    <Route path="/contact"> 
-                        <Contact/>
-                    </Route>
-                </Switch>
-                <Footer />
-            </Router>
+            {/* <Footer /> */}
         </AnimatePresence>
     );
 };

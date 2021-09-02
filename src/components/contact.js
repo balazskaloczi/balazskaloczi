@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const Contact = () => {
     return (
         <div>
-            <motion.div className="contactWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 2.5}}>
+            <motion.div className="contactWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}>
                 <div className="contactFormWrapper">
                     <ContactForm />
                 </div>
