@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import "../css/bootstrap-icons.css"
 import "../css/header.css"
+import { motion } from 'framer-motion'
 
 class Header extends React.Component {
     state = {isClicked : false}
@@ -11,7 +12,7 @@ class Header extends React.Component {
     }
 
     render() {
-    return  <header className="headerContainer">
+    return  <motion.header className="headerContainer" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}>
                     <div className="nameTag">
                         <h3>balazs.kaloczi<i className="bi bi-slash fa-4x"></i></h3>
                     </div>
@@ -23,7 +24,7 @@ class Header extends React.Component {
                     <div  className="icon" onClick={this.handleClick}>
                         <i className={this.state.isClicked ? "bi bi-x fa-3x" : "bi bi-justify fa-3x"}></i>
                     </div>
-            </header>
+            </motion.header>
     };
 }
 
