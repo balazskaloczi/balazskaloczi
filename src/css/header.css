@@ -20,6 +20,7 @@ a, a:link, a:active, a:hover {
 }
 
 .nameTag{
+    margin-top:0.2rem;
     color: white;
     margin-left: 1rem;
     align-self: center;

@@ -8,12 +8,12 @@ const Contact = () => {
             <motion.div className="contactWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}>
                 <div className="contactFormWrapper">
                     <ContactForm />
+                    <ul className="contactList">
+                        <a href="https://www.linkedin.com/in/balazs-kaloczi-9617551b8/" target="_blank" without rel="noreferrer"><i className="bi bi-linkedin"> </i></a>
+                        <a href="https://github.com/balazskaloczi" target="_blank" without rel="noreferrer"><i className="bi bi-github"></i></a>
+                        <a href="mailto:kaloczi.balazs01@gmail.com" target="_blank" without rel="noreferrer"><i className="bi bi-envelope"></i></a>
+                    </ul>
                 </div>
-                <ul className="contactList">
-                    <a href="https://www.linkedin.com/in/balazs-kaloczi-9617551b8/" target="_blank" without rel="noreferrer"><div> <i className="bi bi-linkedin"> </i>Linkedin</div></a>
-                    <a href="https://github.com/balazskaloczi" target="_blank" without rel="noreferrer"><div> <i className="bi bi-github"></i> github</div> </a>
-                    <a href="mailto:kaloczi.balazs01@gmail.com" target="_blank" without rel="noreferrer"><div> <i className="bi bi-envelope"></i> E-mail</div></a>
-                </ul>
             </motion.div>
         </div>
     );

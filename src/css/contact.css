@@ -1,7 +1,6 @@
 .contactWrapper {
     height:calc(100vh - 46px);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("../images/black_contact.svg");
@@ -9,39 +8,57 @@
 }
 
 .contactFormWrapper{
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     padding:0.2rem;
-    background-color: black;
+    background-color: #009473;
+    border: 2px solid white;
 }
 
 .contactList {
-    margin-top: 2rem;
-    color: whitesmoke;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     text-align: center;
     padding: 0;
+    margin: 0;
 }
 
 .contactList a {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     width: 80%;
+    margin: 0.5rem;
+    padding:0.2rem;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
-.contactList a div {
-    border:1px solid black;
-    border-radius: 5px;
-    padding: 0.5rem;
-    margin: 0.4rem 0;
-    background-color: black;
-}
 
 /* Media Query. */
 
 @media only screen and (min-width: 960px) {
 
-    .contactWrapper {
-        height:calc(100vh - 46px);
+    .contactFormWrapper {
         flex-direction: row;
-        justify-content: space-around;
+        border:3px solid white;
     }
 
+    .contactList {
+        flex-direction: column;
+        padding:1.5rem
+    }
+
+    .contactList a {
+        margin-top:0.75rem;
+        margin-bottom:0.75rem;
+        padding:0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactList a i {
+        padding:0.5rem;
+    }
  }

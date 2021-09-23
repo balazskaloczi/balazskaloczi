@@ -16,7 +16,7 @@ import "../css/animatedshardlayout.css"
 export default function App() {
   return (
     <AnimateSharedLayout>
-      <motion.ul className="container" layout >
+      <motion.ul className="container" layout initial={{ borderRadius: 15 }}>
         {items.map(item => (
           <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description}/>
         ))}
@@ -49,8 +49,10 @@ function Content({description}) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div >
       <p>{description}</p>
+      <div className="buttons">
+        <a className="preview" href="#">Preview</a>
+        <a className="site" href="#">Site</a>
       </div>
     </motion.div>
   );

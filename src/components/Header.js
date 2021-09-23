@@ -12,19 +12,19 @@ class Header extends React.Component {
     }
 
     render() {
-    return  <motion.header className="headerContainer" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}>
-                    <div className="nameTag">
+    return  <header className="headerContainer" >
+                    <motion.div initial={{x: -200}} animate={{x: 0}} exit={{x: -200}} transition={{duration: 1.5}} className="nameTag">
                         <h3>balazs.kaloczi<i className="bi bi-slash fa-4x"></i></h3>
-                    </div>
-                    <ul className={this.state.isClicked ? "nav-menu" : "nav-menu--active"}>
+                    </motion.div>
+                    <motion.ul initial={{x: 200}} animate={{x: 0}} exit={{x: 200}} transition={{duration: 1.5}}className={this.state.isClicked ? "nav-menu" : "nav-menu--active"}>
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/projects"><li>Projects</li></Link>
                         <Link to="/contact"><li>Contact</li></Link>
-                    </ul>
-                    <div  className="icon" onClick={this.handleClick}>
-                        <i className={this.state.isClicked ? "bi bi-x fa-3x" : "bi bi-justify fa-3x"}></i>
-                    </div>
-            </motion.header>
+                    </motion.ul>
+                    <motion.div  initial={{x: 100}} animate={{x: 0}} exit={{x: 100}} transition={{duration: 1.5}} className="icon" onClick={this.handleClick}>
+                        <motion.i  className={this.state.isClicked ? "bi bi-x fa-3x" : "bi bi-justify fa-3x"}></motion.i>
+                    </motion.div>
+            </header>
     };
 }
 
