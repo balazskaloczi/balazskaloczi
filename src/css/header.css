@@ -46,7 +46,6 @@ a, a:link, a:active, a:hover {
     list-style-type: none;
     position:absolute;
     left:-100%;
-    
 }
 
 .nav-menu li {
@@ -56,6 +55,7 @@ a, a:link, a:active, a:hover {
     border-bottom: 1px solid #009473;
     background-color: rgb(0, 0, 0);
     transition: translate 2s ease-out;
+    z-index: 4;
 }
 
 

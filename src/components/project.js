@@ -1,14 +1,14 @@
-import ProjectComponent from './projectComponent'
+import Animatedsharedlayout from './animatedsharedlayout'
 import "../css/project.css"
 import { motion } from 'framer-motion'
+
 
 const Project  = () => { 
 
     return ( 
         <div>
             <motion.div className="projectWrapper" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}>
-                    <ProjectComponent />
-                    <ProjectComponent />
+                <Animatedsharedlayout />
             </motion.div>
         </div>
     )}
