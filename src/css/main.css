@@ -1,22 +1,44 @@
-.mainWrapper {
-    color:rgb(255, 255, 255);
-    text-align: center;
-    height:calc(100vh - 46px);
-    overflow: hidden;
-    width: 100%;
-}
 
 .background{
     background-image: url("../images/black_home.svg");
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 3rem);
     background-size: cover;
     pointer-events: none;
     position: absolute;
-    z-index: -1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.avatar {
+    height: 100%;
+}
+
+.avatarImage {
+    display: block;
+    background-color: blanchedalmond;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-left:2rem;
+    margin-top:6rem;
+}
+
+.introText{
+    margin-top: 3rem;
+    margin-left:1.2rem;
+    margin-right:1.2rem;
+    text-align: center;
+}
+
+.role{
+    margin-top: 3rem;
+    margin-left:1.2rem;
+    margin-right:1.2rem;
+    text-align: right;
 }
 
 
