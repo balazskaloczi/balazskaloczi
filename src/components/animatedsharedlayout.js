@@ -51,8 +51,8 @@ function Content({description}) {
     >
       <p>{description}</p>
       <div className="buttons">
-        <a className="preview" href="#">Preview</a>
-        <a className="site" href="#">Site</a>
+        <a className="preview" href="https://www.google.com">Preview</a>
+        <a className="site" href="https://www.google.com">Site</a>
       </div>
     </motion.div>
   );
