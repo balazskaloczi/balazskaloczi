@@ -15,7 +15,8 @@ const Header = () => {
                         <h3>balazs.kaloczi<i className="bi bi-slash fa-4x"></i></h3>
              </motion.div>
             <AnimateSharedLayout>
-                    <motion.ul layout 
+                    <motion.ul 
+                        layout 
                         initial={{x: -400 ,opacity: 0}} 
                         animate={{x: 0,opacity: 1}} 
                         exit={{x: -400,opacity: 0}}

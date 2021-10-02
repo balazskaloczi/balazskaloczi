@@ -3,29 +3,19 @@ import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../css/animatedshardlayout.css"
 
-/**
- * This is an example of animating shared layouts in Framer Motion 2.
- *
- * The open state of each panel is contained locally to that component. Wrapping
- * them all in the same AnimateSharedLayout component allows them all to animate
- * in response to state changes that affect each other's layout.
- *
- * Try removing AnimateSharedLayout to see how that affects the animation.
- */
-
 export default function App() {
   return (
     <AnimateSharedLayout>
       <motion.ul className="container" layout initial={{ borderRadius: 15 }}>
         {items.map(item => (
-          <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description}/>
+          <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description} preview={item.preview} site={item.site}/>
         ))}
       </motion.ul>
     </AnimateSharedLayout>
   );
 }
 
-function Item({title, subtitle, description}) {
+function Item({title, subtitle, description , site , preview}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);
@@ -36,12 +26,12 @@ function Item({title, subtitle, description}) {
         <h3>{title}</h3>
         <p>{subtitle}</p>
       </motion.div>
-      <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} />}</AnimatePresence>
+      <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence>
     </motion.li>
   );
 }
 
-function Content({description}) {
+function Content({description,preview,site}) {
   return (
     <motion.div
       layout
@@ -51,8 +41,8 @@ function Content({description}) {
     >
       <p>{description}</p>
       <div className="buttons">
-        <a className="preview" href="https://www.google.com">Preview</a>
-        <a className="site" href="https://www.google.com">Site</a>
+        <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
+        <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
       </div>
     </motion.div>
   );
@@ -63,10 +53,14 @@ const items = [
   "id" : 0,
   "title" : "TranslateList",
   "subtitle" : "A multi-language translator created with Microsoft Azure's database",
-  "description" : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain'"
+  "description" : "One page website, designed with material UI and running on React. As i writed in the subtitle it uses Microsoft Azure's Translator API. It can save words and sentences to the device's local storage and delete  with a button.",
+  "preview" : "https://www.google.com",
+  "site" : "https://translatelist.netlify.app/"
   },{
   "id" : 1,
   "title" : "MyWebshop",
   "subtitle" : "An e-commerce shop created with commerce.js, stripe",
-  "description" : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...'"
+  "description" : "A fully functional sample e-commerce shop created in react. Frontend is styled with material ui and the back end is the commerce JS API. At a purchase the customer has to use '42' repeatedly at the bank card inforation get an e-mail confirmation of the purchase",
+  "preview" : "https://www.google.com",
+  "site" : "https://balazskaloczishop.netlify.app/"
   }];

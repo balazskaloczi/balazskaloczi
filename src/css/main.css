@@ -24,14 +24,14 @@
     width: 120px;
     border-radius: 50%;
     margin-left:2rem;
-    margin-top:6rem;
+    margin-top:4rem;
 }
 
 .introText{
     margin-top: 3rem;
     margin-left:1.2rem;
     margin-right:1.2rem;
-    text-align: center;
+    text-align: left;
 }
 
 .role{
@@ -41,4 +41,32 @@
     text-align: right;
 }
 
+
+@media only screen and (min-width: 960px) { 
+
+    .avatar{
+        align-items: center;
+    }
+
+    .avatarImage{
+        height:240px;
+        width: 240px;
+        margin-left:4rem;
+        margin-top:5rem;
+    }
+
+    .role {
+        font-size: 200%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .introText {
+        margin-left: 3rem;
+        margin-right: 3rem;;
+        margin-top: 6rem;
+        font-size: 150%;
+        font-weight: bold;
+    }
+
+}
 
