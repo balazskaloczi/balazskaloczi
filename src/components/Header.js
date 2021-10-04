@@ -1,12 +1,57 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import "../css/bootstrap-icons.css"
 import "../css/header.css"
 import { motion,AnimateSharedLayout } from 'framer-motion'
 
+
+
 const Header = () => {
 
     const [iconChange,setIconChange] = useState(false)
+    const [deviceWithLarge,setDeviceWidthLarge] = useState(false)
+    const [width, setWidth]   = useState(window.innerWidth)
+    const updateDimensions = async () => {
+            setWidth(window.innerWidth);
+    }
+
+    const navMenuVariantsSmall = {
+        initial: {
+            x:-400,
+            opacity:0
+        },
+        animate: {
+            x: 0,
+            opacity: 1
+        },
+        exit:{
+            x: 400 ,
+            opacity: 0
+        }
+    }
+
+    const navMenuVariantsLarge = {
+        initial: {
+            x:200,
+            opacity:0
+        },
+        animate: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 1.5
+            }
+        },
+        exit:{
+            x: -800 ,
+            opacity: 0
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
 
 
     return (
@@ -17,10 +62,10 @@ const Header = () => {
             <AnimateSharedLayout>
                     <motion.ul 
                         layout 
-                        initial={{x: -400 ,opacity: 0}} 
-                        animate={{x: 0,opacity: 1}} 
-                        exit={{x: -400,opacity: 0}}
-                        transition={{duration: 0.5}} 
+                        variants={width >= 960 ? navMenuVariantsLarge : navMenuVariantsSmall}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
                         className={iconChange ? "nav-menu" : "nav-menu--active"}>
                         <Link to="/">
                              <motion.li>

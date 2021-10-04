@@ -1,4 +1,7 @@
 
+* {
+    overflow: hidden;
+}
 
 a, a:link, a:active, a:hover {
     color:inherit;
@@ -85,6 +88,7 @@ a, a:link, a:active, a:hover {
     }
     
     .nameTag h3 {
+        margin-top:0.5rem;
         display: flex;
     }
     .nav-menu{
@@ -131,6 +135,7 @@ a, a:link, a:active, a:hover {
         color:white;
         background-color:rgba(255, 255, 255, 0);
         padding-bottom:0.5rem;
+        margin-top:0.5rem;
     }
 
 }
