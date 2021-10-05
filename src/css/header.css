@@ -1,7 +1,8 @@
-
 * {
     overflow: hidden;
 }
+
+
 
 a, a:link, a:active, a:hover {
     color:inherit;
@@ -15,6 +16,7 @@ a, a:link, a:active, a:hover {
     width:100%;
     display:flex;
     justify-content: space-between;
+    overflow: visible;
 }
 
 .headerContainer--scrolled{

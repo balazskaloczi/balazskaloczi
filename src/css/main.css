@@ -19,7 +19,8 @@
 
 .avatarImage {
     display: block;
-    background-color: blanchedalmond;
+    background-image: url("../images/image2jpg.jpg");
+    background-size: cover;
     height: 120px;
     width: 120px;
     border-radius: 50%;

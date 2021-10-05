@@ -9,7 +9,6 @@ import { motion,AnimateSharedLayout } from 'framer-motion'
 const Header = () => {
 
     const [iconChange,setIconChange] = useState(false)
-    const [deviceWithLarge,setDeviceWidthLarge] = useState(false)
     const [width, setWidth]   = useState(window.innerWidth)
     const updateDimensions = async () => {
             setWidth(window.innerWidth);
