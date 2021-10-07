@@ -6,7 +6,8 @@ import "../css/animatedshardlayout.css"
 export default function App() {
   return (
     <AnimateSharedLayout>
-      <motion.ul className="container" layout initial={{ borderRadius: 15 }}>
+      <motion.ul className="container" layout initial={{ y: 450, opacity:0 }}   animate={{ x: 0, y: 0, opacity: 1 }} exit={{  y: 450, opacity:0 }}
+                                    transition={{delay: 1,x: { type: "tween"},default: { duration: 2 }}}>
         {items.map(item => (
           <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description} preview={item.preview} site={item.site}/>
         ))}
