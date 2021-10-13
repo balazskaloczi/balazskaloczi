@@ -7,10 +7,10 @@ export default function App() {
   return (
     <AnimateSharedLayout type="switch">
       <motion.ul className="container" 
-      // layout initial={{ y: 450, opacity:0 }}
-      //   animate={{ x: 0, y: 0, opacity: 1 }} 
-      //   exit={{  y: 450, opacity:0 }}
-      //   transition={{delay: 1,x: { type: "tween"},default: { duration: 2 }}}
+        initial={{ opacity:0 }}
+        animate={{ opacity: 1 }} 
+        exit={{ opacity:0 }}
+        transition={{ duration: 2 }}
         >
         {items.map(item => (
           <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description} preview={item.preview} site={item.site}/>
@@ -26,32 +26,53 @@ function Item({title, subtitle, description , site , preview}) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.li layout onClick={toggleOpen} initial={{ borderRadius: 15 }}>
+    <AnimatePresence exitBeforeEnter={true}>
+    <motion.li layout className={isOpen ? "open" : "closed" } onClick={toggleOpen} 
+          transition={{ ease: "easeOut", duration: 2 }}
+          initial={{opacity: 0 }}
+          animate={{opacity: 1 }}
+          exit={{opacity: 0 }}>
       <motion.div layout >
         <h3>{title}</h3>
         <p>{subtitle}</p>
       </motion.div>
-      <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence>
+      
+        <motion.div className={isOpen ? "openDescription" : "closedDescription" }
+        layout
+        initial={{opacity: 0 }}
+        animate={{opacity: 1 }}
+        exit={{opacity: 0 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        >
+          <p>{description}</p>
+          <div className="buttons">
+            <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
+            <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
+          </div>
+        </motion.div>
+      {/* <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence> */}
     </motion.li>
+    </AnimatePresence>
   );
 }
 
-function Content({description,preview,site}) {
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <p>{description}</p>
-      <div className="buttons">
-        <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
-        <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
-      </div>
-    </motion.div>
-  );
-}
+// function Content({description,preview,site}) {
+//   return (
+//     <motion.div
+//       layout
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//       transition={{delay: 2,duration: 2}}
+//     >
+//       <p>{description}</p>
+//       <div className="buttons">
+//         <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
+//         <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
+//       </div>
+//     </motion.div>
+//   );
+// }
 
 const items = [
   {
