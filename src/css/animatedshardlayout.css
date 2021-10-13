@@ -56,7 +56,13 @@
     opacity: 1;
   } */
 
+  .image {
+    background-image: url("../images/1.jpg");
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
 
+  }
   li:last-child {
     margin-bottom: 0px;
   }
@@ -74,11 +80,13 @@
   .preview {
     background-color: #0066FF;
     padding:0.5rem;
+    z-index: 20;
   }
   
   .site {
     background-color: #715DF2;
     padding: 0.5rem 1rem 0.5rem 1rem;
+    z-index: 20;
   }
 
 
