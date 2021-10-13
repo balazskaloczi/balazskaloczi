@@ -8,10 +8,10 @@
     align-items: center;
     list-style: none;
     border-radius: 15px;
-    z-index: 3;
+    z-index: 1;
 }
   
-/* .container li {
+.container li {
     background-color: #009473;
     border-radius: 10px;
     padding: 1rem;
@@ -19,9 +19,10 @@
     overflow: hidden;
     cursor: pointer;
     border:3px solid white;
-  } */
-  
-.open {
+    z-index: 11;
+  }
+
+/* .open {
   background-color: #009473;
   top:0;
   left:0;
@@ -39,12 +40,12 @@
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 20px;
-  /* overflow: hidden; */
-  cursor: pointer;
+   overflow: hidden; 
+   cursor: pointer;
   border:3px solid white;
-}
+} 
 
-  .closedDescription {
+   .closedDescription {
     position: absolute;
     opacity: 0;
     display: none;
@@ -53,7 +54,7 @@
   .openDescription {
     position: relative;
     opacity: 1;
-  }
+  } */
 
 
   li:last-child {

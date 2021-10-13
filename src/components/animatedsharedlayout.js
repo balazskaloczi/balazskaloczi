@@ -5,13 +5,8 @@ import "../css/animatedshardlayout.css"
 
 export default function App() {
   return (
-    <AnimateSharedLayout type="switch">
-      <motion.ul className="container" 
-        initial={{ opacity:0 }}
-        animate={{ opacity: 1 }} 
-        exit={{ opacity:0 }}
-        transition={{ duration: 2 }}
-        >
+    <AnimateSharedLayout >
+      <motion.ul layout className="container" >
         {items.map(item => (
           <Item key={item.id} title={item.title} subtitle={item.subtitle} description={item.description} preview={item.preview} site={item.site}/>
         ))}
@@ -26,53 +21,31 @@ function Item({title, subtitle, description , site , preview}) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <AnimatePresence exitBeforeEnter={true}>
-    <motion.li layout className={isOpen ? "open" : "closed" } onClick={toggleOpen} 
-          transition={{ ease: "easeOut", duration: 2 }}
-          initial={{opacity: 0 }}
-          animate={{opacity: 1 }}
-          exit={{opacity: 0 }}>
+    <motion.li layout onClick={toggleOpen}>
       <motion.div layout >
         <h3>{title}</h3>
         <p>{subtitle}</p>
       </motion.div>
-      
-        <motion.div className={isOpen ? "openDescription" : "closedDescription" }
-        layout
-        initial={{opacity: 0 }}
-        animate={{opacity: 1 }}
-        exit={{opacity: 0 }}
-        transition={{ ease: "easeOut", duration: 2 }}
-        >
-          <p>{description}</p>
-          <div className="buttons">
-            <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
-            <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
-          </div>
-        </motion.div>
-      {/* <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence> */}
+        <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence>
     </motion.li>
-    </AnimatePresence>
   );
 }
 
-// function Content({description,preview,site}) {
-//   return (
-//     <motion.div
-//       layout
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       exit={{ opacity: 0 }}
-//       transition={{delay: 2,duration: 2}}
-//     >
-//       <p>{description}</p>
-//       <div className="buttons">
-//         <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
-//         <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
-//       </div>
-//     </motion.div>
-//   );
-// }
+function Content({description,preview,site}) {
+  return (
+    <motion.div       layout
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{duration:1}}>
+      <p>{description}</p>
+      <div className="buttons">
+        <a className="preview" href={preview} target='_blank' rel="noopener noreferrer">Preview</a>
+        <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
+      </div>
+    </motion.div>
+  );
+}
 
 const items = [
   {
@@ -82,11 +55,13 @@ const items = [
   "description" : "One page website, designed with material UI and running on React. As i writed in the subtitle it uses Microsoft Azure's Translator API. It can save words and sentences to the device's local storage and delete  with a button.",
   "preview" : "https://www.google.com",
   "site" : "https://translatelist.netlify.app/"
-  },{
+  }
+  ,{
   "id" : 1,
   "title" : "MyWebshop",
   "subtitle" : "An e-commerce shop created with commerce.js, stripe",
   "description" : "A fully functional sample e-commerce shop created in react. Frontend is styled with material ui and the back end is the commerce JS API. At a purchase the customer has to use '42' repeatedly at the bank card inforation get an e-mail confirmation of the purchase",
   "preview" : "https://www.google.com",
   "site" : "https://balazskaloczishop.netlify.app/"
-  }];
+  }
+];

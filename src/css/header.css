@@ -77,7 +77,7 @@ a, a:link, a:active, a:hover {
     color:white;
     font-size: 2rem;
     margin-right: 1.5rem;
-    z-index: 10;
+    z-index: 3;
 }
 
 /* Media Query. */
