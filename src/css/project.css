@@ -1,19 +1,19 @@
 .projectWrapper {
+    height: auto;
     min-height:100vh;
     background-image: url("../images/black_projects.svg");
     background-size:unset;
     background-repeat: no-repeat;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow:hidden;
 }
 
 @media only screen and (min-width: 960px) { 
 
     .projectWrapper {
         background-size:cover;
-
     }
 }

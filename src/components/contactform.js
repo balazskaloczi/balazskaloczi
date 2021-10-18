@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
-    <h3>Write me an e-mail !</h3>
+    <h3>Get in touch !</h3>
       <input type="hidden" name="contact_number" />
       <label>Name</label>
       <input type="text" name="senderName" />
