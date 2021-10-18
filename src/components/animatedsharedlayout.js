@@ -26,15 +26,18 @@ function Item({title, subtitle, description , site , preview}) {
         <h3>{title}</h3>
         <p>{subtitle}</p>
       </motion.div>
-        <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview}/>}</AnimatePresence>
+        <AnimatePresence>{isOpen && <Content subtitle={subtitle} description={description} site={site} preview={preview} isOpen={isOpen} setIsOpen={setIsOpen}/>}</AnimatePresence>
     </motion.li>
   );
 }
 
-function Content({description,preview,site}) {
+function Content({description ,site, isOpen, setIsOpen}) {
   const [previewOpen, setPreviewOpen] = useState(false);
 
-  const toggleOpen = () => {setPreviewOpen(!previewOpen)};
+  const toggleOpen = () => {
+    setPreviewOpen(!previewOpen)
+    setIsOpen(isOpen)
+  };
   
   return (
     <motion.div       layout
@@ -44,7 +47,7 @@ function Content({description,preview,site}) {
     transition={{duration:1}}>
       <p>{description}</p>
       <div className="buttons">
-        <a className={previewOpen ? "preview image" : "preview" } onMouseOver={toggleOpen} target='_blank' rel="noopener noreferrer">Preview</a>
+        <a className={previewOpen ? "preview image" : "preview" } onClick={toggleOpen} target='_blank' rel="noopener noreferrer">Preview</a>
         <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
       </div>
     </motion.div>
