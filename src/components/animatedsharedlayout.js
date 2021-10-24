@@ -32,12 +32,12 @@ function Item({title, subtitle, description , site , preview}) {
 }
 
 function Content({description ,site, isOpen, setIsOpen}) {
-  const [previewOpen, setPreviewOpen] = useState(false);
+  // const [previewOpen, setPreviewOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setPreviewOpen(!previewOpen)
-    setIsOpen(isOpen)
-  };
+  // const toggleOpen = () => {
+  //   setPreviewOpen(!previewOpen)
+  //   setIsOpen(isOpen)
+  // };
   
   return (
     <motion.div       layout
@@ -47,7 +47,7 @@ function Content({description ,site, isOpen, setIsOpen}) {
     transition={{duration:1}}>
       <p>{description}</p>
       <div className="buttons">
-        <a className={previewOpen ? "preview image" : "preview" } onClick={toggleOpen} target='_blank' rel="noopener noreferrer">Preview</a>
+        {/* <a className={previewOpen ? "preview image" : "preview" } onClick={toggleOpen} target='_blank' rel="noopener noreferrer">Preview</a> */}
         <a className="site" href={site} target='_blank' rel="noopener noreferrer">Site</a>
       </div>
     </motion.div>
