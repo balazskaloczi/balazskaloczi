@@ -6,7 +6,7 @@ const Footer = () => {
     
     return (
         <div className="footer-wrapper">
-            <p>	&#169; It's not copyrighted.</p>
+            <p>	&#169; It's not copyrighted, but it looks cool.</p>
             <div className="socialMedia">
             <i className="bi bi-facebook"></i>
             <i className="bi bi-linkedin"></i>

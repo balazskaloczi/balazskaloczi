@@ -1,7 +1,6 @@
 .container
 {
-    height: 40%;
-    margin:0 0 2rem 0;
+    margin-bottom:2rem;
     padding:0;
     box-sizing: border-box;
     display: flex;
@@ -21,11 +20,12 @@
     width: 200px;
     height: 200px;
     background:rgb(7, 7, 7);
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     border: 2px solid white;
+
 }
 .text{
     position:absolute;
@@ -46,3 +46,20 @@
     transform-origin: 0 100px;
     left:50%;
 }
+
+@media only screen and (min-width: 960px) {
+    .logo {
+        height:250px;
+        width:250px;
+    }
+    
+    .circle{
+        height: 320px;
+        width:320px;
+        padding:2rem;
+    }
+    .span{
+        transform-origin: 0 160px;
+        font-weight: bold;
+    }
+ }
