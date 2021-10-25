@@ -12,7 +12,7 @@
 }
   
 .container li {
-    background-color: #009473;
+    background-color: #000000;
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 20px;
@@ -21,39 +21,6 @@
     z-index: 11;
   }
 
-/* .open {
-  background-color: #009473;
-  top:0;
-  left:0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10;
-  border: 5px solid rgb(255, 255, 255);
-  border-radius: 0%;
-  padding: 1rem;
-}
-
-.closed {
-  width: 90%;
-  background-color: #009473;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 20px;
-   overflow: hidden; 
-   cursor: pointer;
-  border:3px solid white;
-} 
-
-   .closedDescription {
-    position: absolute;
-    opacity: 0;
-    display: none;
-  }
-
-  .openDescription {
-    position: relative;
-    opacity: 1;
-  } */
 
   .image {
     background-image: url("../images/1.jpg");

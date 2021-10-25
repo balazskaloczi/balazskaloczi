@@ -4,31 +4,13 @@ import "../css/textspinner.css"
 
 const TextSpinner = () => {
 
-
-
-
-
-    const text = "Balazs Kaloczi - Front End Developer - "
+    const text = "F r o n t   E n d  D e v e l o p e r - B a l a z s  K a l o c z i - "
     const textArray = text.split("");
-    let spanArray = textArray.map((e,index) => {return `<span>${e}</span>`});
-    let html = spanArray.join("")
+    console.log(textArray)
 
-    console.log(spanArray)
-    console.log(html)
-
-    
     function SpanElement({element, index}) {
-        
-        // const css = `
-        // .span{
-        // background-color: #f00;
-        // transform:rotate(${index * 10}deg)
-        // }
-        // `
-
         return (
-            <span className="span" style={{transform: `rotate(${index * 9.2 }deg)`}}>
-            {/* <style>{css}</style> */}
+            <span className="span" style={{transform: `rotate(${index * 5.3}deg)`}}>
                 {element}
             </span>
         )
