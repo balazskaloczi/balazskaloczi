@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header'
-// import Footer from './components/footer'
+import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
 import Project from './components/project'
@@ -26,7 +26,7 @@ const App = () => {
                     <Route  exact path="/projects" component={Project} />
                     <Route path="/contact" component={Contact} /> 
                 </Switch>
-            {/* <Footer /> */}
+            <Footer />
         </AnimatePresence>
     );
 };
