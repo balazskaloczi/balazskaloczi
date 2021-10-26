@@ -3,7 +3,7 @@
 .background{
     background-image: url("../images/black_home.svg");
     width: 100vw;
-    min-height: 100vh;
+    min-height: calc(100vh + 20px);
     background-size: cover;
     pointer-events: none;
     /* position: absolute;
@@ -11,7 +11,6 @@
     flex-direction: column;
     justify-content: center; */
     color:rgb(255, 255, 255);
-    text-align: center;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -34,33 +33,42 @@
     background-color: black;
 } */
 
-.introText{
+.aboutText, .meText{
     margin-left:1.2rem;
     margin-right:1.2rem;
     text-align: left;
-    margin-bottom: 0;
     min-height: 30%;
     letter-spacing: 2px;
-    background-color: blue;
+}
+
+.meText {
+    margin-bottom: 4rem;
 }
 
 .role{
     display: inline-block;
     margin-top: 7rem;
     margin-left:1.2rem;
-    margin-right:1.2rem;
+    margin-right:0.6rem;
     text-align: right;
     min-height: 20%;
     font-weight: bold;
-    background-color: darkgoldenrod;
+    border-right: 4px solid white;
+    padding-right: 0.5rem;
+}
+
+.role:nth-of-type(2){
+    background-color: brown;
 }
 
 .title{
-    display:block;
-    margin-left:3rem;
-    padding:0;
     text-align: left;
-    background-color: crimson;
+    display:inline-block;
+    width: auto;
+    padding-bottom:0.5rem;
+    padding-left:0.5rem;
+    border-bottom:4px solid white;
+    border-left: 4px solid white;
 }
 
 
