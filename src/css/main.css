@@ -2,17 +2,17 @@
 
 .background{
     background-image: url("../images/black_home.svg");
-    width: 100vw;
+    width: 100%;
     min-height: calc(100vh + 20px);
     background-size: cover;
     pointer-events: none;
-    /* position: absolute;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
     color:rgb(255, 255, 255);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: visible;
 }
 
 .divider{
@@ -69,6 +69,7 @@
     padding-left:0.5rem;
     border-bottom:4px solid white;
     border-left: 4px solid white;
+    overflow: hidden;
 }
 
 

@@ -1,6 +1,7 @@
 import "../css/contact.css"
 import ContactForm from './contactform';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import Footer from "./footer";
 
 const Contact = () => {
     return (
@@ -16,6 +17,7 @@ const Contact = () => {
                     </ul>
                 </motion.div>
             </motion.div>
+            <Footer/>
         </div>
     );
 };

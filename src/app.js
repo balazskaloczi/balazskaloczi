@@ -26,7 +26,7 @@ const App = () => {
                     <Route  exact path="/projects" component={Project} />
                     <Route path="/contact" component={Contact} /> 
                 </Switch>
-            <Footer />
+            {/* <Footer />  */}
         </AnimatePresence>
     );
 };

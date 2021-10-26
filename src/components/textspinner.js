@@ -1,6 +1,7 @@
 
-import React from 'react'
-import "../css/textspinner.css"
+import React from 'react';
+import "../css/textspinner.css";
+import { motion } from 'framer-motion';
 
 const TextSpinner = () => {
 
@@ -20,9 +21,9 @@ const TextSpinner = () => {
         <div className="container">
             <div className="circle">
             <div className="logo"></div>
-            <div className="text">
+            <motion.div className="text" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1}} >
                 {textArray.map((element,index) => {return <SpanElement element={element} index={index}/>})}
-            </div>   
+            </motion.div>   
             </div>
         </div>
     )
