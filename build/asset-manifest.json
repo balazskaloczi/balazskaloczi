@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d00e09d.chunk.css",
-    "main.js": "/static/js/main.40ee03dc.chunk.js",
-    "main.js.map": "/static/js/main.40ee03dc.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.40c7df40.js",
-    "runtime-main.js.map": "/static/js/runtime-main.40c7df40.js.map",
-    "static/js/2.d269d829.chunk.js": "/static/js/2.d269d829.chunk.js",
-    "static/js/2.d269d829.chunk.js.map": "/static/js/2.d269d829.chunk.js.map",
-    "static/js/3.9b6a53e8.chunk.js": "/static/js/3.9b6a53e8.chunk.js",
-    "static/js/3.9b6a53e8.chunk.js.map": "/static/js/3.9b6a53e8.chunk.js.map",
+    "main.css": "/static/css/main.5bb45dc3.chunk.css",
+    "main.js": "/static/js/main.76e0ae6d.chunk.js",
+    "main.js.map": "/static/js/main.76e0ae6d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6bcda882.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6bcda882.js.map",
+    "static/js/2.740d6af1.chunk.js": "/static/js/2.740d6af1.chunk.js",
+    "static/js/2.740d6af1.chunk.js.map": "/static/js/2.740d6af1.chunk.js.map",
+    "static/js/3.561ba5a2.chunk.js": "/static/js/3.561ba5a2.chunk.js",
+    "static/js/3.561ba5a2.chunk.js.map": "/static/js/3.561ba5a2.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.8d00e09d.chunk.css.map": "/static/css/main.8d00e09d.chunk.css.map",
-    "static/js/2.d269d829.chunk.js.LICENSE.txt": "/static/js/2.d269d829.chunk.js.LICENSE.txt",
+    "static/css/main.5bb45dc3.chunk.css.map": "/static/css/main.5bb45dc3.chunk.css.map",
+    "static/js/2.740d6af1.chunk.js.LICENSE.txt": "/static/js/2.740d6af1.chunk.js.LICENSE.txt",
     "static/media/animatedshardlayout.css": "/static/media/1.8fad65b7.jpg",
     "static/media/contact.css": "/static/media/black_contact.3c9c0b31.svg",
-    "static/media/main.css": "/static/media/image2jpg.fa5dc516.jpg",
+    "static/media/main.css": "/static/media/black_home.7b0d26f7.svg",
     "static/media/project.css": "/static/media/black_projects.72db2751.svg",
-    "static/media/bootstrap-icons.css": "/static/media/bootstrap-icons.0f69dcdb.woff"
+    "static/media/bootstrap-icons.css": "/static/media/bootstrap-icons.0f69dcdb.woff",
+    "static/media/textspinner.css": "/static/media/image2jpg.fa5dc516.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.40c7df40.js",
-    "static/js/2.d269d829.chunk.js",
-    "static/css/main.8d00e09d.chunk.css",
-    "static/js/main.40ee03dc.chunk.js"
+    "static/js/runtime-main.6bcda882.js",
+    "static/js/2.740d6af1.chunk.js",
+    "static/css/main.5bb45dc3.chunk.css",
+    "static/js/main.76e0ae6d.chunk.js"
   ]
 }
