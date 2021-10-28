@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const TextSpinner = () => {
 
-    const text = "BALAZS KALOCZI FRONT END DEVELOPER |"
+    const text = "BALAZS KALOCZI FRONT END DEVELOPER "
     const textArray = text.split("");
     console.log(textArray)
 
@@ -18,7 +18,7 @@ const TextSpinner = () => {
     }
 
     return (
-        <div className="container">
+        <div className="SpinnerContainer">
             <div className="circle">
             <div className="logo"></div>
             <motion.div className="text" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 2}} >

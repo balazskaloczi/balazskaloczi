@@ -1,4 +1,4 @@
-.container
+.SpinnerContainer
 {
     margin: auto;
     padding:0;
@@ -6,10 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .logo{
-    height: 140px;
-    width: 140px;
+    height:150px;
+    width: 150px;
     border-radius: 50%;
     background-image: url("../images/image2jpg.jpg");
     background-size: cover;
@@ -50,18 +51,24 @@
 }
 
 @media only screen and (min-width: 960px) {
-    .logo {
-        height:250px;
-        width:250px;
-    }
     
-    .circle{
-        height: 320px;
-        width:320px;
-        padding:2rem;
+    .SpinnerContainer {
+        margin-left:4rem;
     }
+
+    .circle {
+        height: 240px;
+        width: 240px;
+        border:2px solid white;
+    }
+
+    .logo{
+        height: 180px;
+        width: 180px;
+    }
+
     .span{
-        transform-origin: 0 160px;
-        font-weight: bold;
+        font-weight: bolder;
+        transform-origin: 0 120px;
     }
  }

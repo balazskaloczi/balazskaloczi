@@ -21,18 +21,6 @@
     margin-bottom: 1rem;
 }
 
-/* .avatarImage {
-    display: block;
-    background-image: url("../images/image2jpg.jpg");
-    background-size: cover;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    margin-left:2rem;
-    margin-top:4rem;
-    background-color: black;
-} */
-
 .aboutText, .meText{
     margin-left:1.2rem;
     margin-right:1.2rem;
@@ -81,7 +69,6 @@
     }
 
     .role {
-        font-size: 200%;
         font-weight: bold;
         text-align: center;
     }
@@ -96,6 +83,7 @@
     .divider{
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
         margin-bottom: 1rem;
     }
 }
@@ -103,8 +91,19 @@
 
 @media only screen and (min-width: 320px) { 
 
+    .divider {
+        margin-top:10rem;
+        margin-bottom:5rem;
+    }
+
     .role {
-        margin-bottom:3rem;
+        height: 50%;
+        padding-top:1.5rem;
+        padding-bottom:1.5rem;
+        margin-top:0;
+        display: block;
+        font-size: 270%;
+        border-right:8px solid white;
     }
 }
 
