@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header'
-import Footer from './components/footer'
 import Main from './components/main'
 import Contact from './components/contact'
 import Project from './components/project'
@@ -17,16 +16,18 @@ import {
 
 const App = () => {
 
+
     const location = useLocation();
+
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
             <Header />
                 <Switch location={location} key={location.pathname}>
                     <Route exact path="/" component={Main} />
-                    <Route  exact path="/projects" component={Project} />
+                    <Route path={["/projects/:id", "/projects"]} location={location} component={Project} />
+                    {/* <Route  component={CardItem} /> */}
                     <Route path="/contact" component={Contact} /> 
                 </Switch>
-            {/* <Footer />  */}
         </AnimatePresence>
     );
 };

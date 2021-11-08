@@ -8,7 +8,6 @@
     align-items: center;
     list-style: none;
     border-radius: 15px;
-    z-index: 1;
 }
   
 .container li {
@@ -16,23 +15,9 @@
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 20px;
-    cursor: pointer;
     border:3px solid white;
-    z-index: 11;
   }
 
-
-  .image {
-    background-image: url("../images/1.jpg");
-    position: absolute;
-    height: 50vh;
-    width: 50vw;
-    top:50%;
-    bottom:50%;
-    left:50%;
-    right:50%;
-
-  }
   li:last-child {
     margin-bottom: 0px;
   }
@@ -50,13 +35,17 @@
   .preview {
     background-color: #0066FF;
     padding:0.5rem;
-    z-index: 20;
+    z-index: 10;
   }
   
   .site {
     background-color: #715DF2;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    z-index: 20;
+    z-index: 10;
+  }
+
+  .linkClass, .linkClass:link, .linkClass:active, .linkClass:hover{
+    color: white;
   }
 
 

@@ -1,7 +1,7 @@
 .footer-wrapper {
+    display: none;
     position: fixed;
     bottom: 0;
-    display: flex;
     background-color: black;
     height: 40px;
     margin-top:-40px;
@@ -32,4 +32,13 @@
 i:nth-child(2) {
     border-left: 1px solid #f2f2f2;
     border-right: 1px solid #f2f2f2;
+  }
+
+
+
+  @media only screen and (min-width: 960px) { 
+
+    .footer-wrapper {
+        display: flex;
+    }
   }
