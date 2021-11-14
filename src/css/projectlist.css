@@ -1,0 +1,55 @@
+
+a,a:visited,a:link {
+    color: initial;
+    text-decoration: none;
+  }
+  
+  .overlay{
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color: rgba(0, 0, 0, 0.466);
+  }
+
+  .block{
+    display: block;
+  }
+  
+  .Projects {
+    position: absolute;
+    text-align: center;
+    background-color: brown;
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .siteTitle {
+    padding: 0 0 20px 0;
+    margin:0;
+  }
+  
+  .objectContainer {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+  }
+  
+  .objectContainerOpened {
+    display: block;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(0, 180, 0);
+  }
+  
+  
+  .objectWrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  

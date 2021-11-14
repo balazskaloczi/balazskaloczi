@@ -5,7 +5,8 @@ import Header from './components/Header'
 import Main from './components/main'
 import Contact from './components/contact'
 import Project from './components/project'
-import { AnimatePresence } from 'framer-motion';
+import CardItem from './components/carditem';
+import { AnimatePresence,AnimateSharedLayout } from 'framer-motion';
 
 import {
   Switch,
@@ -22,12 +23,15 @@ const App = () => {
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
             <Header />
+            <AnimateSharedLayout>
                 <Switch location={location} key={location.pathname}>
                     <Route exact path="/" component={Main} />
                     <Route path={["/projects/:id", "/projects"]} location={location} component={Project} />
-                    {/* <Route  component={CardItem} /> */}
+                    {/* <Route exact path={"/projects"} location={location} component={Project} />
+                    <Route path={"/projects/:id"} component={CardItem} /> */}
                     <Route path="/contact" component={Contact} /> 
                 </Switch>
+            </AnimateSharedLayout>
         </AnimatePresence>
     );
 };

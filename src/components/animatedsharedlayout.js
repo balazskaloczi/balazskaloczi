@@ -1,50 +1,68 @@
 import React from "react";
 import { useState } from "react";
-import { Link ,useParams} from 'react-router-dom';
+import { Link ,useParams } from 'react-router-dom';
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../css/animatedshardlayout.css"
 import { items } from "./data"
 import CardItem from "./carditem";
+import "../css/projectlist.css"
 
-export default function App({location}) {
+export default function Projects({location}) {
 
-  {console.log(location.pathname)}
+let [cardOpened,setCardOpened] = useState();
 
-  let {id} =useParams();
 
-  return (
-    <>
-  
-      <ul className="container" >
-      <AnimateSharedLayout type="crossfade">
-        {items.map(item => (
-          <Item key={item.id} location={location} id={item.id} title={item.title} subtitle={item.subtitle} layoutId={item.title}/>
-        ))}
-          {location === `/projects/${id}` && <CardItem id={id} />}
-        </AnimateSharedLayout>
-      </ul>
-    </>
-  );
-}
-
-function Item({subtitle, id, title, location}) {
 
   return (
-      <li className="itemWrapper">
-      <motion.div layoutId={title}>
-         <Link to={`/projects/${id}`} className="linkClass">
-        <motion.div  layoutId={`${title}-content`}>
-          <h3>{title}</h3>
-          <p>{subtitle}</p>
+    // <>
+    //   <ul className="container" >
+    //     {items.map(item => (
+    //       <Item key={item.id} location={location} id={item.id} title={item.title} subtitle={item.subtitle} />
+    //     ))}
+    //       {location === `/projects/${id}` && <CardItem id={id} />}
+    //   </ul>
+    // </>
+
+    
+    <div className="Projects">
+        <h1 className="siteTitle">{location}</h1>
+        <motion.div className="objectWrapper">
+        <ul >
+          {['Teszt_1', 'Teszt_2', 'Teszt_3'].map((object => 
+          <Link to={`/projects/${object}`}>
+            <motion.li 
+                    className="block"
+                    layoutId={object}
+                    animate={{scale:1}}
+                    transition={{ ease: "easeOut", duration: 0.4 }} 
+                    > 
+                <motion.h1 className="objectContainer">{object}</motion.h1>
+                <motion.div layoutId="overlay"/>
+            </motion.li>
+            {location === `/projects/${object}` && <CardItem/>}
+          </Link>
+          ))}
+          </ul>
         </motion.div>
-        </Link>
-        {/* <AnimatePresence > 
-            {location === `/projects/${id}` && <CardItem id={id} layoutId={title}/>}
-        </AnimatePresence> */}
-      </motion.div>
-      </li>
+    </div>
   );
 }
+
+// function Item({subtitle, id, title}) {
+
+//   return (
+//       <motion.li className="itemWrapper" animate={{scale:1}} transition={{ duration: 10, delay: 0.15 }} layoutId={title}>
+//       <motion.div    className="listItemWrapper" >
+//          <Link to={`/projects/${id}`} className="linkClass">
+//         <motion.div >
+//           <h3>{title}</h3>
+//           <p>{subtitle}</p>
+//         </motion.div>
+//         </Link>
+//       </motion.div>
+//       </motion.li>
+//   );
+// }
 
 // function Content({description ,site, isOpen, setIsOpen}) {
 //   // const [previewOpen, setPreviewOpen] = useState(false);
