@@ -100,10 +100,11 @@
         height: 50%;
         padding-top:1.5rem;
         padding-bottom:1.5rem;
+        margin-right:2rem;
         margin-top:0;
         display: block;
         font-size: 270%;
-        border-right:8px solid white;
+        border-right:12px solid white;
     }
 }
 

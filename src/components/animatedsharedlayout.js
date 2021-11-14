@@ -1,39 +1,48 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link ,useParams} from 'react-router-dom';
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../css/animatedshardlayout.css"
 import { items } from "./data"
 import CardItem from "./carditem";
 
 export default function App({location}) {
+
+  {console.log(location.pathname)}
+
+  let {id} =useParams();
+
   return (
-    <AnimateSharedLayout >
-      <motion.ul layout className="container" >
+    <>
+  
+      <ul className="container" >
+      <AnimateSharedLayout type="crossfade">
         {items.map(item => (
-          <Item key={item.id} location={location} id={item.id} title={item.title} subtitle={item.subtitle} description={item.description} preview={item.preview} site={item.site} layoutId={item.id}/>
+          <Item key={item.id} location={location} id={item.id} title={item.title} subtitle={item.subtitle} layoutId={item.title}/>
         ))}
-      </motion.ul>
-    </AnimateSharedLayout>
+          {location === `/projects/${id}` && <CardItem id={id} />}
+        </AnimateSharedLayout>
+      </ul>
+    </>
   );
 }
 
-function Item({subtitle, layoutId, id, title, location}) {
-
-  console.log(location)
-
-  if( location === 'projects/translatelist') {console.log('babgulyas')}
+function Item({subtitle, id, title, location}) {
 
   return (
-      <motion.li layout layoutId={id} >
+      <li className="itemWrapper">
+      <motion.div layoutId={title}>
          <Link to={`/projects/${id}`} className="linkClass">
-        <motion.div layout >
+        <motion.div  layoutId={`${title}-content`}>
           <h3>{title}</h3>
           <p>{subtitle}</p>
         </motion.div>
         </Link>
-            {location === `/projects/${id}` && <CardItem id={id} layoutId={id} />}
-      </motion.li>
+        {/* <AnimatePresence > 
+            {location === `/projects/${id}` && <CardItem id={id} layoutId={title}/>}
+        </AnimatePresence> */}
+      </motion.div>
+      </li>
   );
 }
 

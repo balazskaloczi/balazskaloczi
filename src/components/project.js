@@ -9,9 +9,7 @@ const Project  = ({location}) => {
 
     return ( 
         <div>
-            <motion.div  className="projectWrapper" 
-            // initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1.5}}
-            >
+            <motion.div  className="projectWrapper">
                 <Animatedsharedlayout location={location.pathname}/>
             </motion.div>
             <Footer/>
