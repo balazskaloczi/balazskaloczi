@@ -92,21 +92,26 @@
 @media only screen and (min-width: 320px) { 
 
     .divider {
-        margin-top:10rem;
-        margin-bottom:5rem;
+        margin-top:5rem;
     }
 
     .role {
         height: 50%;
-        padding-top:1.5rem;
-        padding-bottom:1.5rem;
+        padding-top:2.5rem;
+        padding-bottom:2.5rem;
         margin-right:2rem;
         margin-top:0;
         display: block;
         font-size: 270%;
         border-right:12px solid white;
+        margin-bottom:2rem;
     }
 }
 
 
+@media only screen and (min-width: 1360px) { 
 
+    .divider{
+        margin-top:6rem;
+    }
+}

@@ -4,12 +4,18 @@ a,a:visited,a:link {
     text-decoration: none;
   }
   
+
+  .objectWrapper li {
+    color: initial;
+    list-style: none;
+    position: relative;
+  }
   .overlay{
-      position: absolute;
+      position: fixed;
+      height: 100vw;
       top:0;
-      bottom:0;
       left:0;
-      right:0;
+      width: 100vw;
       background-color: rgba(0, 0, 0, 0.466);
   }
 
@@ -17,16 +23,16 @@ a,a:visited,a:link {
     display: block;
   }
   
-  .Projects {
-    position: absolute;
+  /* .Projects {
+    position: initial;
     text-align: center;
-    background-color: brown;
+    background-color: rgb(216, 12, 12);
     height:100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+  } */
   
   .siteTitle {
     padding: 0 0 20px 0;
@@ -38,16 +44,10 @@ a,a:visited,a:link {
     width: 200px;
     height: 200px;
     background-color: blueviolet;
+    margin-bottom:20px;
+    z-index: 1;
   }
-  
-  .objectContainerOpened {
-    display: block;
-    width: 350px;
-    height: 350px;
-    background-color: rgb(0, 180, 0);
-  }
-  
-  
+    
   .objectWrapper {
     display: flex;
     justify-content: space-evenly;

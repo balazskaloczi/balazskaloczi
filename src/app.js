@@ -4,9 +4,8 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header'
 import Main from './components/main'
 import Contact from './components/contact'
-import Project from './components/project'
-import CardItem from './components/carditem';
 import { AnimatePresence,AnimateSharedLayout } from 'framer-motion';
+import Animatedsharedlayout from './components/animatedsharedlayout'
 
 import {
   Switch,
@@ -22,12 +21,12 @@ const App = () => {
 
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
+            <AnimateSharedLayout >
             <Header />
-            <AnimateSharedLayout>
                 <Switch location={location} key={location.pathname}>
                     <Route exact path="/" component={Main} />
-                    <Route path={["/projects/:id", "/projects"]} location={location} component={Project} />
-                    {/* <Route exact path={"/projects"} location={location} component={Project} />
+                    <Route path={["/projects/:id", "/projects"]} location={location} component={Animatedsharedlayout} />
+                    {/* <Route exact path={"/projects"} location={location} component={Animatedsharedlayout} />
                     <Route path={"/projects/:id"} component={CardItem} /> */}
                     <Route path="/contact" component={Contact} /> 
                 </Switch>
