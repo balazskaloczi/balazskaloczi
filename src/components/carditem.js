@@ -20,10 +20,10 @@ return (
       initial={{opacity:0}} 
       animate={{opacity:1}} 
       transition={{ ease: "easeOut", duration: 0.4 }}>
-          <motion.h1 className="projectTitle">{title}</motion.h1>
-          <motion.h2 >{subtitle}</motion.h2>
+          <motion.h1 className="projectTitle" layoutId={`title-${id}`}>{title}</motion.h1>
+          <motion.h2 layoutId={`subtitle-${id}`}>{subtitle}</motion.h2>
           <motion.h4 >{description}</motion.h4>
-          <motion.div className="selectedItemButtons" initial={{opacity:0}} animate={{opacity:1}} transition={{ ease: "easeOut", duration: 0.8 }}>
+          <motion.div className="selectedItemButtons" initial={{opacity:0,scale:1}} animate={{opacity:1,scale:1}} transition={{ ease: "easeOut", duration: 0.8 }}>
             <a href={site} target="_blank" rel="noreferrer"><button>Site</button></a>
             <Link to="/projects"><button>Back</button></Link>
             <a href={code} target="_blank" rel="noreferrer"><button>Code</button></a>
